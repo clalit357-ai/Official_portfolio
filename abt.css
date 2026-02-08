@@ -1,0 +1,146 @@
+/* EXPERIENCE SECTION */
+.experience-heading {
+    margin-top: 120px;
+    padding: 60px 8%;
+    text-align: center;
+}
+
+/* FLOWCHART CONTAINER */
+.flowchart {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+/* MAIN EXPERIENCE BOX */
+.exp-block {
+    padding: 12px 28px;
+    border: 2px solid #00e5ff;
+    border-radius: 10px;
+    background: #0f172a;
+    color: white;
+    font-size: 18px;
+}
+
+/* VERTICAL LINE FROM EXPERIENCE */
+.vertical-line {
+    width: 2px;
+    height: 40px;
+    background: #00e5ff;
+    margin: 0 auto;
+}
+
+/* BRANCH CONTAINER */
+.branch {
+    display: flex;
+    gap: 70px;
+    margin-top: 30px;
+    position: relative;
+}
+
+/* HORIZONTAL CONNECTOR LINE */
+.branch::before {
+    content: "";
+    position: absolute;
+    top: -20px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #00e5ff;
+}
+
+/* BRANCH BOXES */
+.branch1,
+.branch2,
+.branch3,
+.branch4,
+.branch5 {
+    padding: 10px 22px;
+    border: 2px solid #00e5ff;
+    border-radius: 10px;
+    background: #0f172a;
+    color: white;
+    cursor: pointer;
+    position: relative;
+}
+
+/* VERTICAL LINES DOWN FROM HORIZONTAL */
+.branch1::before,
+.branch2::before,
+.branch3::before,
+.branch4::before,
+.branch5::before {
+    content: "";
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 20px;
+    background: #00e5ff;
+}
+
+/* HOVER BOX (SHARED FOR ALL) */
+.hover-box {
+    opacity: 0;
+    transform: translate(-50%, 10px);
+    pointer-events: none;
+
+    position: absolute;
+    top: 140%;
+    left: 50%;
+    width: 360px;
+    padding: 20px;
+
+    background: #020617;
+    border: 1px solid #00e5ff;
+    border-radius: 12px;
+    text-align: left;
+    z-index: 50;
+
+    transition:
+        opacity 0.4s ease,
+        transform 0.4s ease;
+}
+
+
+/* SHOW HOVER PANEL */
+.branch1:hover .hover-box,
+.branch2:hover .hover-box,
+.branch3:hover .hover-box,
+.branch4:hover .hover-box,
+.branch5:hover .hover-box {
+    opacity: 1;
+    transform: translate(-50%, 0);
+    pointer-events: auto;
+}
+
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+    .branch {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .branch::before {
+        display: none;
+    }
+
+    .branch1::before,
+    .branch2::before,
+    .branch3::before,
+    .branch4::before,
+    .branch5::before {
+        display: none;
+    }
+
+    .hover-box {
+        position: static;
+        transform: none;
+        width: 100%;
+        margin-top: 15px;
+    }
+}
+

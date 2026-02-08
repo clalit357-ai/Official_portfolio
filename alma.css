@@ -1,0 +1,87 @@
+body{
+    background: #0b0f19;
+    color: white;
+}
+.education {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 80px 8%;
+    gap: 40px;
+}
+
+.education-text {
+    flex: 1;
+}
+
+.education-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.education-image img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 12px;
+}
+
+.edu-block {
+    margin-bottom: 30px;
+}
+.education-heading{
+    text-align : center;
+    text-decoration: underline;
+    text-decoration-style: solid;
+}
+.edu-desc{
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    font-size: 18px;
+    font-family : "helvetica neue", helvetica, arial, sans-serif;
+    line-height: 1.6;
+    margin-top: 10px;
+
+}
+.hs{
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    font-size: 18px;
+    font-family : "helvetica neue", helvetica, arial, sans-serif;
+    line-height: 1.6;
+    margin-top: 10px;
+
+}
+.pes{
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    font-size: 18px;
+    font-family : "helvetica neue", helvetica, arial, sans-serif;
+    line-height: 1.6;
+    margin-top: 10px;
+}
+.edu-image1,
+.edu-image2,
+.edu-image3 {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+/* Actual images */
+.edu-image1 img,
+
+.edu-image3 img {
+    width: 100%;
+    max-width: 350px;
+    border-radius: 12px;
+}
+
+@media (max-width: 900px) {
+    .education {
+        flex-direction: column;
+        text-align: center;
+        gap: 40px;
+    }
+
+    .nav-links {
+        display: none;
+    }
+}

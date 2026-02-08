@@ -1,0 +1,180 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #0b0f19;
+    color: white;
+}
+
+/* 🔹 NAVBAR */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+}
+
+.hire-btn {
+    padding: 10px 20px;
+    border-radius: 6px;
+    background: #00e5ff;
+    color: black;
+    text-decoration: none;
+}
+
+
+/* 🔹 HERO SECTION */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 80px 8%;
+    min-height: 80vh;
+}
+
+.hero-text {
+    flex: 1;
+}
+
+.role {
+    color: #00e5ff;
+    margin-bottom: 10px;
+}
+
+.hero-text h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.hero-text span {
+    color: #00e5ff;
+}
+
+.desc {
+    max-width: 500px;
+    margin-bottom: 25px;
+    opacity: 0.8;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+}
+
+.btn {
+    padding: 10px 20px;
+    border-radius: 6px;
+    text-decoration: none;
+}
+
+.primary {
+    background: #00e5ff;
+    color: black;
+}
+
+.secondary {
+    border: 1px solid #00e5ff;
+    color: #00e5ff;
+}
+
+/* 🔹 HERO IMAGE */
+.profile-wrap {
+    
+    position: relative;
+    width: 320px;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.profile-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    
+    position: relative;
+    width: 320px;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.profile-wrap::before {
+    content: "";
+    position: absolute;
+    inset: -15px;
+    border-radius: 50%;
+
+    background: conic-gradient(
+        from 0deg,
+        transparent,
+        rgba(0, 229, 255, 0.6),
+        transparent
+    );
+
+    filter: blur(12px);
+    opacity: 0.7;
+
+    animation: halo 8s linear infinite;
+}
+
+
+
+@keyframes halo {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+.profile-wrap {
+    animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%   { transform: translateY(0); }
+    50%  { transform: translateY(-8px); }
+    100% { transform: translateY(0); }
+}
+
+
+
+
+/* 📱 RESPONSIVE */
+@media (max-width: 900px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        gap: 40px;
+    }
+
+    .nav-links {
+        display: none;
+    }
+}
+.footer {
+    text-align: center;
+    padding: 20px 0;
+    background: #0b0f19;
+    color: white;
+    margin-top: 40px;
+}
